@@ -1,6 +1,15 @@
 'use strict';
 //global vars
 var storeOpenHours = ['6am', '7am','8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+function generateTable() {
+  var table = document.createElement('table');
+  table.setAttribute('id', 'store-table');
+  document.body.appendChild(table);
+
+  //store in a variable (create, set content, set attribute, put on page)
+  return table;
+}
+
 //constructor function
 function Store(name, minCustPerHour, maxCustPerHour, avgCookiesPerCust) {
   this.name = name;
